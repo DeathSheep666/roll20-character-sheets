@@ -1437,8 +1437,57 @@
         </div>
       </fieldset>
     </div>
-    <!-- Hexslingin - End -->
+    <!-- Doomsayer - End -->
 
+    <!-- Hexslingin - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="hexslingin" /><label class="sheet-tab" for="attr_arcane_sheet_hexslingin" data-i18n="hexslingin">Hexslingin</label>
+    <div class="sheet-section sheet-section-hexslingin">
+      <h3 data-i18n="hexes">Hexes</h3>
+      <div class="sheet-item sheet-item-hexslingin">
+        <h4 data-i18n="name">Name</h4>
+        <h4 data-i18n="trait">Trait</h4>
+        <h4 data-i18n="hand">Hand</h4>
+        <h4 data-i18n="speed">Speed</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_hexes">
+        <div class="sheet-item sheet-item-hexslingin">
+          <input type="text" name="attr_hexname" value="i.e. Hunch">
+          <select name="attr_hextrait">
+            <option value="@{cogdtype}" selected="selected" data-i18n="cognition">Cognition</option>
+            <option value="@{defdtype}" data-i18n="deftness">Deftness</option>
+            <option value="@{knodtype}" data-i18n="knowledge">Knowledge</option>
+            <option value="@{miendtype}" data-i18n="mien">Mien</option>
+            <option value="@{nimdtype}" data-i18n="nimbleness">Nimbleness</option>
+            <option value="@{quidtype}" data-i18n="quickness">Quickness</option>
+            <option value="@{smadtype}" data-i18n="smarts">Smarts</option>
+            <option value="@{spidtype}" data-i18n="spirit">Spirit</option>
+            <option value="@{strdtype}" data-i18n="strength">Strength</option>
+            <option value="@{vigdtype}" data-i18n="vigor">Vigor</option>
+          </select>
+          <select name="attr_hexhand">
+            <option value="ace" selected="selected" data-i18n="pokerhandAce">Ace</option>
+            <option value="pair" data-i18n="pokerhandPair">Pair</option>
+            <option value="jacks" data-i18n="pokerhandJacks">Jacks</option>
+            <option value="twopair" data-i18n="pokerhandTwoPair">Two Pair</option>
+            <option value="threeofakind" data-i18n="pokerhandThreeOfAKind">Three of a kind</option>
+            <option value="straight" data-i18n="pokerhandStraight">Straight</option>
+            <option value="flush" data-i18n="pokerhandFlush">Flush</option>
+            <option value="fullhouse" data-i18n="pokerhandFullHouse">Full House</option>
+            <option value="fourofakind" data-i18n="pokerhandFourOfAKind">Four of a kind</option>
+            <option value="straightflush" data-i18n="pokerhandStraightFlush">Straight Flush</option>
+          </select>
+          <input type="text" name="attr_hexspeed" value="2 rounds" />
+          <input type="text" name="attr_hexduration" value="Instant" />
+          <input type="text" name="attr_hexrange" value="Self" />
+          <button type="roll" name="roll_hex" value="@{gmtoggle}&{template:simple} {{rollname=@{hexname}}} {{dice=[[{@{hexslinginlvl}@{hextrait}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_hexdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Hexslingin - End -->
+    
     <!-- Mad Scientist - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="madscience" /><label for="attr_arcane_sheet_madscience" data-i18n="madScience">Mad Science</label>
     <div class="sheet-section sheet-section-madscience">
@@ -1538,6 +1587,53 @@
       </fieldset>
     </div>
     <!-- Shaman - End -->
+    
+    <!-- Syker - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="syker" /><label class="sheet-tab" for="attr_arcane_sheet_syker" data-i18n="syker">Syker</label>
+    <div class="sheet-section sheet-section-syker">
+      <h3 data-i18n="sykerpowers">Syker Powers</h3>
+      <div class="sheet-item sheet-item-syker">
+        <h4 data-i18n="name">Name</h4>
+        <h4 data-i18n'"TN">TN</h4>
+        <h4 data-i18n="strain">Strain</h4>
+        <h4 data-i18n="speed">Speed</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_sykerpowers">
+        <div class="sheet-item sheet-item-sykerpowers">
+          <input type="text" name="attr_sykerpowername" value="i.e. Brain Blast" />
+          <input type="text" name="attr_sykerpowerTN" value="5" />
+          <input type="text" name="attr_sykerpowerstrain" value="1" />
+          <input type="text" name="attr_sykerpowerspeed" value="1" />
+          <input type="text" name="attr_sykerpowerduration" value="Instant" />
+          <input type="text" name="attr_sykerpowerrange" value="20 yards/blastin' level" />
+          <button type="roll" name="roll_sykerpower" value="@{gmtoggle}&{template:simple} {{rollname=@{sykerpowername}}} {{dice=[[{@{blastinlvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_sykerpowerdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Syker - End -->    
+    
+    <!-- Templar - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="templar" /><label for="attr_arcane_sheet_templar" data-i18n="templar">Templar</label>
+    <div class="sheet-section sheet-section-templar">
+      <h3 data-i18n="rewards">Rewards</h3>
+      <div class="sheet-item sheet-item-templar">
+        <h4 data-i18n="reward">Reward</h4>
+        <h4 data-i18n="level">Level</h4>
+        <h4 data-i18n="greaterreward">Greater Reward</h4>
+     </div>
+      <fieldset class="repeating_rewards">
+        <div class="sheet-item sheet-item-templar">
+          <input type="text" name="attr_rewardname" value="i.e. Lay on Hands">
+          <input type="text" name="attr_rewardlevel" value="5" />
+          <input type="text" name="attr_greaterreward" value="Can cure ailments." />
+          <textarea name="attr_miracledesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Templar - End -->
   </div>
   <!-- Arcane Ablities Tab - End -->
 
