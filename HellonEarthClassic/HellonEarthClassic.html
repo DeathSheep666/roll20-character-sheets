@@ -82,11 +82,13 @@
       medicineMacro: getTranslationByKey("medicine"),
       areaKnowledgeMacro: getTranslationByKey("areaKnowledge"),
       homeCountyMacro: getTranslationByKey("homeCounty"),
+      blastinMacro: getTranslationByKey ("blastin"),
       demolitionMacro: getTranslationByKey("demolition"),
       disguiseMacro: getTranslationByKey("disguise"),
       languageMacro: getTranslationByKey("language"),
       madScienceMacro: getTranslationByKey("madScience"),
       scienceMacro: getTranslationByKey("science"),
+      witchcraftMacro: getTranslationByKey("witchcraft),
       smartsMacro: getTranslationByKey("smarts"),
       tinkeringMacro: getTranslationByKey("tinkering"),
       bluffMacro: getTranslationByKey("bluff"),
@@ -639,6 +641,14 @@
           <button type="roll" name="roll_areakno" value="@{gmtoggle}&{template:simple} {{rollname=@{areaKnowledgeMacro}: @{areaknoname}}} {{aptitude=[[@{areaknolvl}@{knodtype}!!k1+(@{areaknomod}+@{wound_mod})]]}} {{level=[[@{areaknolvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
+            <div class="sheet-item sheet-item-traits">
+        <h4 data-i18n="blastin">Blastin'</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_blastinlvl" value="0" />
+          +
+        </div>
+        <button type="roll" name="roll_Blastin" value="@{gmtoggle}&{template:simple} {{rollname=@{blastinMacro}}} {{aptitude=[[@{blastinlvl}@{knodtype}!!k1+(@{blastinmod}+@{wound_mod})]]}} {{level=[[@{blastinlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+      </div>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="demolition">Demolition</h4>
         <div class="sheet-grid-1m1">
@@ -747,6 +757,15 @@
           <button type="roll" name="roll_extraknoapt" value="@{gmtoggle}&{template:simple} {{rollname=@{extraknoapt}}} {{aptitude=[[@{extraknoaptlvl}@{knodtype}!!k1+(@{extraknoaptmod}+@{wound_mod})]]}} {{level=[[@{extraknoaptlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
+    </div>
+    <div class="sheet-item sheet-item-traits">
+      <h4 data-i18n="witchcraft">Witchcraft</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_witchcraftlvl" value="0" />
+          +
+          <input type="text" name="attr_witchcraftmod" value="0" />
+        </div>
+        <button type="roll" name="roll_Witchcraft" value="@{gmtoggle}&{template:simple} {{rollname=@{witchcraftMacro}}} {{aptitude=[[@{witchcraftlvl}@{knodtype}!!k1+(@{witchcraftmod}+@{wound_mod})]]}} {{level=[[@{witchcraftlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
     </div>
     <!-- Knowledge -->
     <!-- Mien -->
