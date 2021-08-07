@@ -747,6 +747,15 @@
           <button type="roll" name="roll_Trade" value="@{gmtoggle}&{template:simple} {{rollname=@{tradeMacro}: @{tradename}}} {{aptitude=[[@{tradelvl}@{knodtype}!!k1+(@{trademod}+@{wound_mod})]]}} {{level=[[@{tradelvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
+    <div class="sheet-item sheet-item-traits">
+      <h4 data-i18n="witchcraft">Witchcraft</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_witchcraftlvl" value="0" />
+          +
+          <input type="text" name="attr_witchcraftmod" value="0" />
+        </div>
+        <button type="roll" name="roll_Witchcraft" value="@{gmtoggle}&{template:simple} {{rollname=@{witchcraftMacro}}} {{aptitude=[[@{witchcraftlvl}@{knodtype}!!k1+(@{witchcraftmod}+@{wound_mod})]]}} {{level=[[@{witchcraftlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+    </div>
       <fieldset class="repeating_extraknoapt">
         <div class="sheet-item sheet-item-traits">
           <input type="text" name="attr_extraknoapt" value="Additional Aptitude" />
@@ -758,15 +767,6 @@
           <button type="roll" name="roll_extraknoapt" value="@{gmtoggle}&{template:simple} {{rollname=@{extraknoapt}}} {{aptitude=[[@{extraknoaptlvl}@{knodtype}!!k1+(@{extraknoaptmod}+@{wound_mod})]]}} {{level=[[@{extraknoaptlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
-    </div>
-    <div class="sheet-item sheet-item-traits">
-      <h4 data-i18n="witchcraft">Witchcraft</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_witchcraftlvl" value="0" />
-          +
-          <input type="text" name="attr_witchcraftmod" value="0" />
-        </div>
-        <button type="roll" name="roll_Witchcraft" value="@{gmtoggle}&{template:simple} {{rollname=@{witchcraftMacro}}} {{aptitude=[[@{witchcraftlvl}@{knodtype}!!k1+(@{witchcraftmod}+@{wound_mod})]]}} {{level=[[@{witchcraftlvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
     </div>
     <!-- Knowledge -->
     <!-- Mien -->
