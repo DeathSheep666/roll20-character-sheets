@@ -319,9 +319,12 @@
   grid-template-columns: 3fr repeat(5, 1fr) 50px;
 }
 
+.charsheet .repcontainer .sheet-item-doomsayer,
 .charsheet .repcontainer .sheet-item-hexslingin,
 .charsheet .repcontainer .sheet-item-madscience,
 .charsheet .repcontainer .sheet-item-blessed,
+.charsheet .repcontainer .sheet-item-syker,
+.charsheet .repcontainer .sheet-item-templar,
 .charsheet .repcontainer .sheet-item-ritual,
 .charsheet .repcontainer .sheet-item-favor,
 .charsheet .repcontainer .sheet-item-edges {
@@ -329,9 +332,12 @@
   padding-bottom: 0.5em;
 }
 
+.charsheet .sheet-item-doomsayer textarea,
 .charsheet .sheet-item-hexslingin textarea,
 .charsheet .sheet-item-madscience textarea,
 .charsheet .sheet-item-blessed textarea,
+.charsheet .sheet-item-syker textarea,
+.charsheet .sheet-item-templar textarea,
 .charsheet .sheet-item-ritual textarea,
 .charsheet .sheet-item-favor textarea,
 .charsheet .sheet-item-edges textarea {
