@@ -288,12 +288,24 @@
   grid-template-columns: max-content max-content 1fr;
 }
 
+.charsheet .sheet-item-doomsayer {
+  grid-template-columns: 3fr repeat(5, 1fr) 50px;
+}
+
 .charsheet .sheet-item-hexslingin {
   grid-template-columns: 3fr repeat(5, 1fr) 50px;
 }
 
 .charsheet .sheet-item-madscience {
   grid-template-columns: 3fr 1fr 1fr 50px;
+}
+
+.charsheet .sheet-item-syker {
+  grid-template-columns: 3fr repeat(5, 1fr) 50px;
+}
+
+.charsheet .sheet-item-templar {
+  grid-template-columns: 3fr repeat(5, 1fr) 50px;
 }
 
 .charsheet .sheet-item-misc * {
