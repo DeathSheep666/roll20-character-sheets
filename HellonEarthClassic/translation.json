@@ -13,6 +13,7 @@
 	"armorNormal": "Armor",
 	"art": "Arts",
 	"artillery": "Artillery",
+	"blastin": "Blastin",
 	"blessed": "Blessed",
 	"bluff": "Bluff",
 	"bounty": "Bounty",
@@ -164,6 +165,7 @@
 	"vigor": "Vigor",
 	"weapon": "Weapon",
 	"wind": "Wind",
+	"witchcraft": "Witchcraft",
 	"worstNightmare": "Your Worst Nightmare",
 	"woundMod": "Wound Modifier",
 	"wounds": "Wounds"
