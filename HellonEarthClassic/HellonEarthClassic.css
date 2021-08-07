@@ -305,7 +305,7 @@
 }
 
 .charsheet .sheet-item-templar {
-  grid-template-columns: 3fr repeat(5, 1fr) 50px;
+  grid-template-columns: 3fr repeat(2, 50px 1fr) 150px;
 }
 
 .charsheet .sheet-item-misc * {
