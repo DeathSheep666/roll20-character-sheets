@@ -800,17 +800,17 @@
 
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(6),
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(6) + label {
-  grid-area: tab5;
+  grid-area: tab6;
 }
 
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(7),
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(7) + label {
-  grid-area: tab5;
+  grid-area: tab7;
 }
 
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(8),
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(8) + label {
-  grid-area: tab5;
+  grid-area: tab8;
 }
 
 .charsheet .sheet-section-misc {
