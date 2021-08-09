@@ -437,7 +437,7 @@
             +
             <input type="text" name="attr_artilconcmod" value="0" />
           </div>
-          <button type="roll" name="roll_artilconc" value="@{gmtoggle}&{template:simple} {{rollname=@{artMacro}: @{artilconc}}} {{aptitude=[[@{artillvl}@{cogdtype}!!k1+(@{artilconcmod}+@{wound_mod})]]}} {{level=[[@{artillvl}]]}} {{unskilled=[[1@{cogdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+          <button type="roll" name="roll_artilconc" value="@{gmtoggle}&{template:simple} {{rollname=@{artilMacro}: @{artilconc}}} {{aptitude=[[@{artillvl}@{cogdtype}!!k1+(@{artilconcmod}+@{wound_mod})]]}} {{level=[[@{artillvl}]]}} {{unskilled=[[1@{cogdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
       <div class="sheet-item sheet-item-traits">
@@ -563,13 +563,18 @@
       </div>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="speedload">Speed Load</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_speedloadlvl" value="0" />
-          +
-          <input type="text" name="attr_speedloadmod" value="0" />
-        </div>
-        <button type="roll" name="roll_speedload" value="@{gmtoggle}&{template:simple} {{rollname=@{speedloadMacro}}} {{aptitude=[[@{speedloadlvl}@{defdtype}!!k1+(@{speedloadmod}+@{wound_mod})]]}} {{level=[[@{speedloadlvl}]]}} {{unskilled=[[1@{defdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
+      <fieldset class="repeating_speedloadconc">
+        <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
+          <input type="text" name="attr_speedloadconc" placeholder="Type of Gun" />
+          <div class="sheet-grid-1m1">
+            <input type="text" name="attr_speedloadlvl" value="0" />
+            +
+            <input type="text" name="attr_speedloadconcmod" value="0" />
+          </div>
+          <button type="roll" name="roll_speedload" value="@{gmtoggle}&{template:simple} {{rollname=@{speedloadMacro}: @{speedloadconc}}} {{aptitude=[[@{speedloadlvl}@{defdtype}!!k1+(@{speedloadconcmod}+@{wound_mod})]]}} {{level=[[@{speedloadlvl}]]}} {{unskilled=[[1@{defdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+        </div>
+      </fieldset>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="throwing">Throwin'</h4>
       </div>
@@ -630,15 +635,6 @@
       </fieldset>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="areaKnowledge">Area Knowledge</h4>
-      </div>
-      <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
-        <span><span data-i18n="homeCounty">Home County</span> (2)</span>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_akhomecountylvl" value="2" />
-          +
-          <input type="text" name="attr_akhomecountymod" value="0" />
-        </div>
-        <button type="roll" name="roll_akhomecounty" value="@{gmtoggle}&{template:simple} {{rollname=@{areaKnowledgeMacro}: @{homeCountyMacro}}} {{aptitude=[[@{akhomecountylvl}@{knodtype}!!k1+(@{akhomecountymod}+@{wound_mod})]]}} {{level=[[@{akhomecountylvl}]]}} {{unskilled=[[1@{knodtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
       <fieldset class="repeating_areakno">
         <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
@@ -910,13 +906,18 @@
       </div>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="driving">Drivin'</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_drivinlvl" value="0" />
-          +
-          <input type="text" name="attr_drivinmod" value="0" />
-        </div>
-        <button type="roll" name="roll_Drivin" value="@{gmtoggle}&{template:simple} {{rollname=@{drivingMacro}}} {{aptitude=[[@{drivinlvl}@{nimdtype}!!k1+(@{drivinmod}+@{wound_mod})]]}} {{level=[[@{drivinlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
+      <fieldset class="repeating_drivin">
+        <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
+          <input type="text" name="attr_fightinname" value="Tank">
+          <div class="sheet-grid-1m1">
+            <input type="text" name="attr_drivinlvl" value="0" />
+            +
+            <input type="text" name="attr_drivinmod" value="0" />
+          </div>
+          <button type="roll" name="roll_drivin" value="@{gmtoggle}&{template:simple} {{rollname=@{drivingMacro}: @{drivinname}}} {{aptitude=[[@{drivinlvl}@{nimdtype}!!k1+(@{drivinmod}+@{wound_mod})]]}} {{level=[[@{drivinlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+        </div>
+      </fieldset>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="fighting">Fightin'</h4>
       </div>
@@ -931,15 +932,34 @@
           <button type="roll" name="roll_fightin" value="@{gmtoggle}&{template:simple} {{rollname=@{fightingMacro}: @{fightinname}}} {{aptitude=[[@{fightinlvl}@{nimdtype}!!k1+(@{fightinmod}+@{wound_mod})]]}} {{level=[[@{fightinlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
         </div>
       </fieldset>
-      <div class="sheet-item sheet-item-traits">
-        <h4 data-i18n="horseRiding">Horse Ridin'</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_horselvl" value="0" />
-          +
-          <input type="text" name="attr_horsemod" value="0" />
-        </div>
-        <button type="roll" name="roll_HorseRide" value="@{gmtoggle}&{template:simple} {{rollname=@{horseRidingMacro}}} {{aptitude=[[@{horselvl}@{nimdtype}!!k1+(@{horsemod}+@{wound_mod})]]}} {{level=[[@{horselvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+       <div class="sheet-item sheet-item-traits">
+        <h4>Flyin'</h4>
       </div>
+      <fieldset class="repeating_flyin">
+        <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
+          <input type="text" name="attr_flyinname" value="Helicopter">
+          <div class="sheet-grid-1m1">
+            <input type="text" name="attr_flyinlvl" value="0" />
+            +
+            <input type="text" name="attr_flyinmod" value="0" />
+          </div>
+          <button type="roll" name="roll_flyin" value="@{gmtoggle}&{template:simple} {{rollname=@{flyingMacro}: @{flyinname}}} {{aptitude=[[@{flyinlvl}@{nimdtype}!!k1+(@{flyinmod}+@{wound_mod})]]}} {{level=[[@{flyinlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+        </div>
+      </fieldset>
+      <div class="sheet-item sheet-item-traits">
+        <h4>Ridin'</h4>
+      </div>
+      <fieldset class="repeating_ridin">
+        <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
+          <input type="text" name="attr_ridinname" value="Horse">
+          <div class="sheet-grid-1m1">
+            <input type="text" name="attr_ridinlvl" value="0" />
+            +
+            <input type="text" name="attr_ridinmod" value="0" />
+          </div>
+          <button type="roll" name="roll_ridin" value="@{gmtoggle}&{template:simple} {{rollname=@{ridingMacro}: @{ridinname}}} {{aptitude=[[@{ridinlvl}@{nimdtype}!!k1+(@{ridinmod}+@{wound_mod})]]}} {{level=[[@{ridinlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+        </div>
+      </fieldset>      
       <div class="sheet-item sheet-item-traits">
         <h4><span data-i18n="sneak">Sneak</span> (1)</h4>
         <div class="sheet-grid-1m1">
@@ -999,13 +1019,18 @@
       </div>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="quickDraw">quickDraw</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_quidralvl" value="0" />
-          +
-          <input type="text" name="attr_quidramod" value="0" />
-        </div>
-        <button type="roll" name="roll_QuickDraw" value="@{gmtoggle}&{template:simple} {{rollname=@{quickDrawMacro}}} {{aptitude=[[@{quidralvl}@{quidtype}!!k1+(@{quidramod}+@{wound_mod})]]}} {{level=[[@{quidralvl}]]}} {{unskilled=[[1@{quidtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
+      <fieldset class="repeating_quickdraw">
+        <div class="sheet-item sheet-item-traits sheet-item-traits-concentration">
+          <input type="text" name="attr_quickdrawname" value="Pistol">
+          <div class="sheet-grid-1m1">
+            <input type="text" name="attr_quickdrawlvl" value="0" />
+            +
+            <input type="text" name="attr_quickdrawmod" value="0" />
+          </div>
+          <button type="roll" name="roll_quickdraw" value="@{gmtoggle}&{template:simple} {{rollname=@{quickdrawMacro}: @{quickdrawname}}} {{aptitude=[[@{quickdrawlvl}@{nimdtype}!!k1+(@{quickdrawmod}+@{wound_mod})]]}} {{level=[[@{quickdrawlvl}]]}} {{unskilled=[[1@{nimdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+        </div>
+      </fieldset>      
       <fieldset class="repeating_extraquidapt">
         <div class="sheet-item sheet-item-traits">
           <input type="text" name="attr_extraquidapt" value="Additional Aptitude" />
@@ -1035,6 +1060,15 @@
           </select>
         </div>
         <button type="roll" name="roll_Smarts" value="@{gmtoggle}&{template:simple} {{rollname=@{smartsMacro}}} {{dice=[[@{smalvl}@{smadtype}!!k1+(@{wound_mod})]]}}"></button>
+      </div>
+      <div class="sheet-item sheet-item-traits">
+        <h4>Astrogation</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_astrolvl" value="0" />
+          +
+          <input type="text" name="attr_astromod" value="0" />
+        </div>
+        <button type="roll" name="roll_Astro" value="@{gmtoggle}&{template:simple} {{rollname=@{astroMacro}}} {{aptitude=[[@{astrolvl}@{smadtype}!!k1+(@{astromod}+@{wound_mod})]]}} {{level=[[@{astrolvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
       <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="bluff">Bluff</h4>
@@ -1104,6 +1138,15 @@
         </div>
         <button type="roll" name="roll_Tinkerin" value="@{gmtoggle}&{template:simple} {{rollname=@{tinkeringMacro}}} {{aptitude=[[@{tinkerinlvl}@{smadtype}!!k1+(@{tinkerinmod}+@{wound_mod})]]}} {{level=[[@{tinkerinlvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
+       <div class="sheet-item sheet-item-traits">
+        <h4>Transmute</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_translvl" value="0" />
+          +
+          <input type="text" name="attr_transmod" value="0" />
+        </div>
+        <button type="roll" name="roll_Trans" value="@{gmtoggle}&{template:simple} {{rollname=@{transMacro}}} {{aptitude=[[@{translvl}@{smadtype}!!k1+(@{transmod}+@{wound_mod})]]}} {{level=[[@{translvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+      </div>
       <fieldset class="repeating_extrasmaapt">
         <div class="sheet-item sheet-item-traits">
           <input type="text" name="attr_extrasmaapt" value="Additional Aptitude" />
@@ -1135,6 +1178,15 @@
         <button type="roll" name="roll_spirit" value="@{gmtoggle}&{template:simple} {{rollname=@{spiritMacro}}} {{dice=[[@{spilvl}@{spidtype}!!k1+(@{wound_mod})]]}}"></button>
       </div>
       <div class="sheet-item sheet-item-traits">
+        <h4>Ch'i</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_chilvl" value="0" />
+          +
+          <input type="text" name="attr_chimod" value="0" />
+        </div>
+        <button type="roll" name="roll_Chi" value="@{gmtoggle}&{template:simple} {{rollname=@{chiMacro}}} {{aptitude=[[@{chilvl}@{smadtype}!!k1+(@{chimod}+@{wound_mod})]]}} {{level=[[@{chilvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+      </div>
+      <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="faith">Faith</h4>
         <div class="sheet-grid-1m1">
           <input type="text" name="attr_faithlvl" value="0" />
@@ -1144,6 +1196,15 @@
         <button type="roll" name="roll_Faith" value="@{gmtoggle}&{template:simple} {{rollname=@{faithMacro}}} {{aptitude=[[@{faithlvl}@{spidtype}!!k1+(@{faithmod}+@{wound_mod})]]}} {{level=[[@{faithlvl}]]}} {{unskilled=[[1@{spidtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
       <div class="sheet-item sheet-item-traits">
+        <h4>Fastin'</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_fastlvl" value="0" />
+          +
+          <input type="text" name="attr_fastmod" value="0" />
+        </div>
+        <button type="roll" name="roll_Fast" value="@{gmtoggle}&{template:simple} {{rollname=@{fastMacro}}} {{aptitude=[[@{fastlvl}@{smadtype}!!k1+(@{fastmod}+@{wound_mod})]]}} {{level=[[@{fastlvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+      </div>
+      <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="guts">Guts</h4>
         <div class="sheet-grid-1m1">
           <input type="text" name="attr_gutslvl" value="0" />
@@ -1151,6 +1212,15 @@
           <input type="text" name="attr_gutsmod" value="0" />
         </div>
         <button type="roll" name="roll_Guts" value="@{gmtoggle}&{template:simple} {{rollname=@{gutsMacro}}} {{aptitude=[[@{gutslvl}@{spidtype}!!k1+(@{gutsmod}+@{wound_mod})]]}} {{level=[[@{gutslvl}]]}} {{unskilled=[[1@{spidtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
+      </div>
+       <div class="sheet-item sheet-item-traits">
+        <h4>Meditation</h4>
+        <div class="sheet-grid-1m1">
+          <input type="text" name="attr_meditatelvl" value="0" />
+          +
+          <input type="text" name="attr_meditatemod" value="0" />
+        </div>
+        <button type="roll" name="roll_Meditate" value="@{gmtoggle}&{template:simple} {{rollname=@{meditateMacro}}} {{aptitude=[[@{meditatelvl}@{smadtype}!!k1+(@{meditatemod}+@{wound_mod})]]}} {{level=[[@{meditatelvl}]]}} {{unskilled=[[1@{smadtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
       </div>
       <fieldset class="repeating_extraspiapt">
         <div class="sheet-item sheet-item-traits">
@@ -1372,6 +1442,7 @@
       <fieldset class="repeating_range">
         <div class="sheet-item sheet-item-ranged">
           <h4 class="sheet-valign-bottom" data-i18n="weapon">Weapon</h4>
+          <h4 class="sheet-valign-bottom">Speed</h4>
           <h4 class="sheet-align-center sheet-valign-bottom" data-i18n="range">Range</h4>
           <h4 class="sheet-align-center sheet-valign-bottom" data-i18n="rof">RoF</h4>
           <div class="sheet-item-ranged-ammo">
@@ -1416,6 +1487,11 @@
         </div>
       </fieldset>
     </div>
+    <div class="sheet-borderdiv">
+      <h3 data-i18n="hand2hand">Notes</h3>
+      <div class="sheet-item sheet-item-Notes">
+         <textarea name="attr_notes_name" value="Notes" </textarea>
+      </div>
   </div>
   <!-- Combat Stuff Tab - End -->
 
@@ -1423,33 +1499,89 @@
   <input type="radio" class="sheet-tab" name="sheet-tabs" value="3" title="Arcane Ablities"/><label for="sheet-tab-arcane" class="sheet-tab" data-i18n="arcane">Arcane Ablities</label>
   <div class="sheet-section sheet-section-arcane sheet-borderdiv">
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="None" checked="checked" /><label class="sheet-tab" for="attr_arcane_sheet_none" data-i18n="none">None</label>
-    <!-- Doomsayer - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="doomsayer" /><label class="sheet-tab" for="attr_arcane_sheet_doomsayer">Doomsayer</label>
-    <div class="sheet-section sheet-section-doomsayer">
+
+    <!-- Blessed - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="blessed" /><label for="attr_arcane_sheet_blessed" data-i18n="blessed">Blessed</label>
+    <div class="sheet-section sheet-section-blessed">
+      <h3 data-i18n="miracles">Miracles</h3>
+      <div class="sheet-item sheet-item-blessed">
+        <h4 data-i18n="miracle">Miracle</h4>
+        <h4 data-i18n="tn">TN</h4>
+        <h4 data-i18n="speed">Speed</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_miracles">
+        <div class="sheet-item sheet-item-blessed">
+          <input type="text" name="attr_miraclename" value="i.e. Holy Roller">
+          <input type="text" name="attr_miracletn" value="5" />
+          <input type="text" name="attr_miraclespeed" value="1" />
+          <input type="text" name="attr_miracleduration" value="Permanent" />
+          <input type="text" name="attr_miraclerange" value="Self" />
+          <button type="roll" name="roll_miracle" value="@{gmtoggle}&{template:simple} {{rollname=@{miraclename}}} {{dice=[[{@{faithlvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_miracledesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+      
+      <h3>Gifts</h3>
+      <div class="sheet-item sheet-item-gift">
+        <h4 data-i18n="name">Name</h4>
+      </div>
+      <fieldset class="repeating_gifts">
+        <div class="sheet-item sheet-item-gift">
+          <input type="text" name="attr_giftname" value="i.e. Beast Friend">
+          <textarea name="attr_giftdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Blessed - End -->
+    
+    <!-- Enlightened - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="enlightened" /><label class="sheet-tab" for="attr_arcane_sheet_enlightened">Enlightened</label>
+    <div class="sheet-section sheet-section-enlightened">
       <h3>Powers</h3>
-      <div class="sheet-item sheet-item-doomsayer">
+      <div class="sheet-item sheet-item-enlightened">
         <h4>Name</h4>
         <h4>TN</h4>
         <h4>Strain</h4>
         <h4>Speed</h4>
         <h4>Duration</h4>
-        <h4>Range</h4>
       </div>
-      <fieldset class="repeating_doomsayer">
-        <div class="sheet-item sheet-item-doomsayer">
-          <input type="text" name="attr_powername" value="i.e. Hunch">
+      <fieldset class="repeating_enlightened">
+        <div class="sheet-item sheet-item-enlightened">
+          <input type="text" name="attr_powername" value="i.e. Abundance of Pecking Birds">
           <input type="text" name="attr_TN" value="5">
           <input type="text" name="Strain" value="1">
           <input type="text" name="attr_powerspeed" value="2 rounds" />
           <input type="text" name="attr_powerduration" value="Instant" />
-          <input type="text" name="attr_powerrange" value="Self" />
-          <button type="roll" name="roll_power" value="@{gmtoggle}&{template:simple} {{rollname=@{powername}}} {{dice=[[{@{faithlvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <button type="roll" name="roll_power" value="@{gmtoggle}&{template:simple} {{rollname=@{powername}}} {{dice=[[{@{chilvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
           <textarea name="attr_powerdesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
-    <!-- Doomsayer - End -->
+    <!-- Enlightened - End -->
 
+    <!-- Harrowed - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="harrowed" /><label for="attr_arcane_sheet_harrowed">Harrowed/Guardian</label>
+    <div class="sheet-section sheet-section-harrowed">
+      <h3>Powers</h3>
+      <div class="sheet-item sheet-item-harrowed">
+        <h4>Power</h4>
+        <h4>Level</h4>
+        <h4>Speed</h4>
+        <h4>Duration</h4>
+     </div>
+      <fieldset class="repeating_hpowers">
+        <div class="sheet-item sheet-item-harrowed">
+          <input type="text" name="attr_hpowername" value="i.e. Arcane Protection">
+          <input type="text" name="attr_hpowerlevel" value="1" />
+          <input type="text" name="attr_hpowerspeed" value="Instant" />
+          <input type="text" name="attr_hpowerduration" value="Instant" />
+          <textarea name="attr_hpowerdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    <!-- Harrowed - End -->
+      
     <!-- Hexslingin - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="hexslingin" /><label class="sheet-tab" for="attr_arcane_sheet_hexslingin" data-i18n="hexslingin">Hexslingin</label>
     <div class="sheet-section sheet-section-hexslingin">
@@ -1496,6 +1628,23 @@
           <textarea name="attr_hexdesc" value="Description"></textarea>
         </div>
       </fieldset>
+     <h3>Tricks</h3>
+      <div class="sheet-item sheet-item-trick">
+        <h4>Trick</h4>
+        <h4>Trait</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_tricks">
+        <div class="sheet-item sheet-item-trick">
+          <input type="text" name="attr_trickname" value="i.e. Bandage">
+          <input type="text" name="attr_tricktrait" value="Smarts">
+          <input type="text" name="attr_trickduration" value="Permanent" />
+          <input type="text" name="attr_trickrange" value="Touch">
+          <button type="roll" name="roll_trick" value="@{gmtoggle}&{template:simple} {{rollname=@{trickname}}} {{dice=[[{@{tricklvl}@{tricktrait}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_favordesc" value="Description"></textarea>
+        </div>
+      </fieldset>
     </div>
     <!-- Hexslingin - End -->
     
@@ -1520,31 +1669,26 @@
       </fieldset>
     </div>
     <!-- Mad Scientist - End -->
-
-    <!-- Blessed - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="blessed" /><label for="attr_arcane_sheet_blessed" data-i18n="blessed">Blessed</label>
-    <div class="sheet-section sheet-section-blessed">
-      <h3 data-i18n="miracles">Miracles</h3>
-      <div class="sheet-item sheet-item-blessed">
-        <h4 data-i18n="miracle">Miracle</h4>
-        <h4 data-i18n="tn">TN</h4>
-        <h4 data-i18n="speed">Speed</h4>
-        <h4 data-i18n="duration">Duration</h4>
-        <h4 data-i18n="range">Range</h4>
-      </div>
-      <fieldset class="repeating_miracles">
-        <div class="sheet-item sheet-item-blessed">
-          <input type="text" name="attr_miraclename" value="i.e. Holy Roller">
-          <input type="text" name="attr_miracletn" value="5" />
-          <input type="text" name="attr_miraclespeed" value="1" />
-          <input type="text" name="attr_miracleduration" value="Permanent" />
-          <input type="text" name="attr_miraclerange" value="Self" />
-          <button type="roll" name="roll_miracle" value="@{gmtoggle}&{template:simple} {{rollname=@{miraclename}}} {{dice=[[{@{faithlvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_miracledesc" value="Description"></textarea>
+      
+    <!-- Mute - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="mute" /><label for="attr_arcane_sheet_mute">Mute</label>
+    <div class="sheet-section sheet-section-mute">
+      <h3>Rewards</h3>
+      <div class="sheet-item sheet-item-mute">
+        <h4>Package</h4>
+        <h4>Price</h4>
+        <h4>Components</h4>
+     </div>
+      <fieldset class="repeating_packages">
+        <div class="sheet-item sheet-item-mute">
+          <input type="text" name="attr_packagename" value="i.e. Aircraft">
+          <input type="text" name="attr_packageprice" value="$6000" />
+          <input type="text" name="attr_packagecomp" value="Electronic, Mechanical, Structural" />
+          <textarea name="attr_rewarddesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
-    <!-- Blessed - End -->
+    <!-- Mute - End -->
 
     <!-- Shaman - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="shaman" /><label for="attr_arcane_sheet_shaman" data-i18n="shaman">Shaman</label>
@@ -1645,6 +1789,29 @@
       </fieldset>
     </div>
     <!-- Templar - End -->
+      
+    <!-- Witch - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="witch" /><label for="attr_arcane_sheet_witch">Witch</label>
+    <div class="sheet-section sheet-section-witch">
+      <h3>Spells</h3>
+      <div class="sheet-item sheet-item-witch">
+        <h4>Power</h4>
+        <h4>Level</h4>
+        <h4>Speed</h4>
+        <h4>Duration</h4>
+     </div>
+      <fieldset class="repeating_spells">
+        <div class="sheet-item sheet-item-witch">
+          <input type="text" name="attr_spellname" value="i.e. Arcane Protection">
+          <input type="text" name="attr_spelllevel" value="1" />
+          <input type="text" name="attr_spellspeed" value="Instant" />
+          <input type="text" name="attr_spellduration" value="Instant" />
+          <button type="roll" name="roll_spell" value="@{gmtoggle}&{template:simple} {{rollname=@{spellname}}} {{dice=[[{@{witchcraftlvl}@{knodietype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_hpowerdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    <!-- Witch - End -->    
+   
   </div>
   <!-- Arcane Ablities Tab - End -->
 
