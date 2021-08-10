@@ -1596,7 +1596,7 @@
           <input type="text" name="attr_hpowerlevel" value="1" />
           <input type="text" name="attr_hpowerspeed" value="Varies" />
           <input type="text" name="attr_hpowerduration" value="Permanent" />
-          <textarea name="attr_hexdesc" value="Description"></textarea>
+          <textarea name="attr_hpowerdesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
@@ -1774,8 +1774,8 @@
           <input type="text" name="attr_spowerspeed" value="1" />
           <input type="text" name="attr_spowerduration" value="Instant" />
           <input type="text" name="attr_spowerrange" value="20 yards/blastin' level" />
-          <button type="roll" name="roll_hex" value="@{gmtoggle}&{template:simple} {{rollname=@{spowername}}} {{dice=[[{@{blastinlvl}@{knodtype}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_hexdesc" value="Description"></textarea>
+          <button type="roll" name="roll_spower" value="@{gmtoggle}&{template:simple} {{rollname=@{spowername}}} {{dice=[[{@{blastinlvl}@{knodtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_spowerdesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
@@ -1793,11 +1793,12 @@
       </div>
       <fieldset class="repeating_hpowers">
         <div class="sheet-item sheet-item-witch">
-          <input type="text" name="attr_hpowername" value="i.e. Stitchin'">
-          <input type="text" name="attr_hpowerlevel" value="1" />
-          <input type="text" name="attr_hpowerspeed" value="Varies" />
-          <input type="text" name="attr_hpowerduration" value="Permanent" />
-          <textarea name="attr_hexdesc" value="Description"></textarea>
+          <input type="text" name="attr_spellname" value="i.e. Eldritch Blast">
+          <input type="text" name="attr_spelltn" value="5" />
+          <input type="text" name="attr_spellscroung" value="3" />
+          <input type="text" name="attr_spellcomp" value="Small round balls such as marbles." />
+          <button type="roll" name="roll_spell" value="@{gmtoggle}&{template:simple} {{rollname=@{spellname}}} {{dice=[[{@{witchcraftlvl}@{knodtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_spelldesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
