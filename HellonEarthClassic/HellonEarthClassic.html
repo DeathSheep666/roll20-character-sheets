@@ -1561,7 +1561,7 @@
       <h3>Powers</h3>
       <div class="sheet-item sheet-item-enlightened">
         <h4 data-i18n="name">Name</h4>
-        <h4 data-i18n="trait">TN</h4>
+        <h4 data-i18n="tn">TN</h4>
         <h4 data-i18n="hand">Strain</h4>
         <h4 data-i18n="speed">Speed</h4>
         <h4 data-i18n="duration">Duration</h4>
@@ -1731,6 +1731,33 @@
       </fieldset>
     </div>
     <!-- Shaman - End -->
+    
+    <!-- Syker - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="syker" /><label class="sheet-tab" for="attr_arcane_sheet_sykder">Syker</label>
+    <div class="sheet-section sheet-section-syker">
+      <h3>Powers</h3>
+      <div class="sheet-item sheet-item-syker">
+        <h4 data-i18n="name">Name</h4>
+        <h4 data-i18n="tn">TN</h4>
+        <h4>Strain</h4>
+        <h4 data-i18n="speed">Speed</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_spowers">
+        <div class="sheet-item sheet-item-syker">
+          <input type="text" name="attr_spowername" value="i.e. Brain Blast">
+          <input type="text" name="attr_spowertn" value="5" />
+          <input type="text" name="attr_spowerstrain" value="1" />
+          <input type="text" name="attr_spowerspeed" value="1" />
+          <input type="text" name="attr_spowerduration" value="Instant" />
+          <input type="text" name="attr_spowerrange" value="20 yards/blastin' level" />
+          <button type="roll" name="roll_hex" value="@{gmtoggle}&{template:simple} {{rollname=@{spowername}}} {{dice=[[{@{blastinlvl}@{knodtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_hexdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Syker - End -->    
   </div>
   <!-- Arcane Ablities Tab - End -->
 
