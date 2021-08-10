@@ -303,7 +303,7 @@
 }
 
 .charsheet .sheet-item-enlightened {
-  grid-template-columns: 3fr repeat(5, 1fr) 50px;
+  grid-template-columns: 3fr repeat(4, 1fr) 50px;
 }
 
 .charsheet .sheet-item-harrowed {
@@ -799,9 +799,9 @@
 
 .charsheet .sheet-section-arcane {
   grid-template-areas:
-    "header header header header header"
-    "tab1   tab2   tab3   tab4   tab5"
-    "spells spells spells spells spells";  
+    "header header header header header header"
+    "tab1   tab2   tab3   tab4   tab5   tab6"
+    "spells spells spells spells spells spells";  
 }
 
 .charsheet .sheet-section-arcane > h3 {
@@ -833,6 +833,10 @@
   grid-area: tab5;
 }
 
+.charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(6),
+.charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(6) + label {
+  grid-area: tab6;
+}
 .charsheet .sheet-section-misc {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
