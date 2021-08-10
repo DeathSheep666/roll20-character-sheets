@@ -1788,7 +1788,7 @@
       <div class="sheet-item sheet-item-witch">
         <h4 data-i18n="name">Name</h4>
         <h4 data-i18n="tn">TN</h4>
-        <h4 data-i18n="scroungin">Scroungin'</h4>
+        <h4 data-i18n="scrounging">Scroungin'</h4>
         <h4>Components</h4>
       </div>
       <fieldset class="repeating_spells">
@@ -1797,6 +1797,7 @@
           <input type="text" name="attr_spelltn" value="5" />
           <input type="text" name="attr_spellscroung" value="3" />
           <input type="text" name="attr_spellcomp" value="Small round balls such as marbles." />
+          <button type="roll" name="roll_spell" value="@{gmtoggle}&{template:simple} {{rollname=@{spellname}}} {{dice=[[{@{witchcraftlvl}@{knodtype}!!k1+(@{wound_mod})}]]}}"></button>
           <textarea name="attr_spelldesc" value="Description"></textarea>
         </div>
       </fieldset>
