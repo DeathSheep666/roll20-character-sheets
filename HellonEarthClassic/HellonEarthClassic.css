@@ -310,6 +310,10 @@
   grid-template-columns: 3fr repeat(3, 1fr) 50px;
 }
 
+.charsheet .sheet-item-witch {
+  grid-template-columns: 3fr 1fr 1fr 3fr 50px;
+}
+
 .charsheet .sheet-item-hexslingin {
   grid-template-columns: 3fr repeat(5, 1fr) 50px;
 }
@@ -328,10 +332,6 @@
 
 .charsheet .sheet-item-templar {
   grid-template-columns: 3fr 1fr 3fr 50px;
-}
-
-.charsheet .sheet-item-witch {
-  grid-template-columns: 3fr 1fr 1fr 3fr 50px;
 }
 
 .charsheet .sheet-item-misc * {
