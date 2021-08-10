@@ -1462,7 +1462,6 @@
       <fieldset class="repeating_range">
         <div class="sheet-item sheet-item-ranged">
           <h4 class="sheet-valign-bottom" data-i18n="weapon">Weapon</h4>
-          <h4 class="sheet-valign-bottom">Speed</h4>
           <h4 class="sheet-align-center sheet-valign-bottom" data-i18n="range">Range</h4>
           <h4 class="sheet-align-center sheet-valign-bottom" data-i18n="rof">RoF</h4>
           <div class="sheet-item-ranged-ammo">
@@ -1473,7 +1472,6 @@
           <h4 data-i18n="damage" class="sheet-valign-bottom">Damage</h4>
           <div class="sheet-spacer">&nbsp;</div>
           <input type="text" name="attr_ranged_name" placeholder="Colt Army" />
-          <input type="text" name="atrr_ranged_speed" class="sheet-align-center" value="10" />
           <input type="text" name="attr_ranged_range" class="sheet-align-center" value="0" />
           <input type="text" name="attr_ranged_rof" class="sheet-align-center" value="1" />
           <div class="sheet-item-ranged-ammo">
@@ -1507,12 +1505,6 @@
           <button type="roll" name="roll_h2h_attack" class="sheet-button-attack-melee" value="@{gmtoggle}&{template:simple} {{rollname=@{h2h_name}}} {{damage=[[floor(((@{strlvl}@{strdtype}!!k1) + @{h2h_damage} + @{wound_mod}))]]}}"></button>
         </div>
       </fieldset>
-    </div>
-    <div class="sheet-borderdiv">
-      <h3 data-i18n="hand2hand">Notes</h3>
-      <div class="sheet-item sheet-item-Notes">
-         <textarea name="attr_notes_name" value="Notes" </textarea>
-      </div>
     </div>
   </div>
   <!-- Combat Stuff Tab - End -->
