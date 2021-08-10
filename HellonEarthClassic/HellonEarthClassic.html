@@ -1701,6 +1701,26 @@
     </div>
     <!-- Mad Scientist - End -->
 
+    <!-- Mute - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="mute" /><label class="sheet-tab" for="attr_arcane_sheet_mute">Mute</label>
+    <div class="sheet-section sheet-section-mute">
+      <h3>Packages</h3>
+      <div class="sheet-item sheet-item-mute">
+        <h4 data-i18n="name">Name</h4>
+        <h4>Price</h4>
+        <h4>Components</h4>
+      </div>
+      <fieldset class="repeating_packages">
+        <div class="sheet-item sheet-item-mute">
+          <input type="text" name="attr_packagename" value="i.e. Aircraft">
+          <input type="text" name="attr_packageprice" value="$6000" />
+          <input type="text" name="attr_packagecomp" value="Components" />
+          <textarea name="attr_rewarddesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Mute - End --> 
+    
     <!-- Shaman - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="shaman" /><label for="attr_arcane_sheet_shaman" data-i18n="shaman">Shaman</label>
     <div class="sheet-section sheet-section-shaman">
@@ -1792,7 +1812,7 @@
       </div>
       <fieldset class="repeating_rewards">
         <div class="sheet-item sheet-item-templar">
-          <input type="text" name="attr_rewardname" value="i.e. Lay on Hands'">
+          <input type="text" name="attr_rewardname" value="i.e. Lay on Hands">
           <input type="text" name="attr_rewardlevel" value="1" />
           <input type="text" name="attr_rewardgreater" value="Can cure ailments." />
           <textarea name="attr_rewarddesc" value="Description"></textarea>
