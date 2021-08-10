@@ -1543,66 +1543,9 @@
           <textarea name="attr_miracledesc" value="Description"></textarea>
         </div>
       </fieldset>
-      <h3>Gifts</h3>
-      <div class="sheet-item sheet-item-gift">
-        <h4 data-i18n="name">Name</h4>
-      </div>
-      <fieldset class="repeating_gifts">
-        <div class="sheet-item sheet-item-gift">
-          <input type="text" name="attr_giftname" value="i.e. Beast Friend">
-          <textarea name="attr_giftdesc" value="Description"></textarea>
-        </div>
-      </fieldset>
     </div>
     <!-- Blessed - End -->
-    
-    <!-- Enlightened - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="enlightened" /><label class="sheet-tab" for="attr_arcane_sheet_enlightened">Enlightened</label>
-    <div class="sheet-section sheet-section-enlightened">
-      <h3>Powers</h3>
-      <div class="sheet-item sheet-item-enlightened">
-        <h4>Name</h4>
-        <h4>TN</h4>
-        <h4>Strain</h4>
-        <h4>Speed</h4>
-        <h4>Duration</h4>
-      </div>
-      <fieldset class="repeating_enlightened">
-        <div class="sheet-item sheet-item-enlightened">
-          <input type="text" name="attr_powername" value="i.e. Abundance of Pecking Birds">
-          <input type="text" name="attr_TN" value="5">
-          <input type="text" name="Strain" value="1">
-          <input type="text" name="attr_powerspeed" value="2 rounds" />
-          <input type="text" name="attr_powerduration" value="Instant" />
-          <button type="roll" name="roll_power" value="@{gmtoggle}&{template:simple} {{rollname=@{powername}}} {{dice=[[{@{chilvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_powerdesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Enlightened - End -->
 
-    <!-- Harrowed - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="harrowed" /><label for="attr_arcane_sheet_harrowed">Harrowed/Guardian</label>
-    <div class="sheet-section sheet-section-harrowed">
-      <h3>Powers</h3>
-      <div class="sheet-item sheet-item-harrowed">
-        <h4>Power</h4>
-        <h4>Level</h4>
-        <h4>Speed</h4>
-        <h4>Duration</h4>
-     </div>
-      <fieldset class="repeating_hpowers">
-        <div class="sheet-item sheet-item-harrowed">
-          <input type="text" name="attr_hpowername" value="i.e. Arcane Protection">
-          <input type="text" name="attr_hpowerlevel" value="1" />
-          <input type="text" name="attr_hpowerspeed" value="Instant" />
-          <input type="text" name="attr_hpowerduration" value="Instant" />
-          <textarea name="attr_hpowerdesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Harrowed - End -->
-      
     <!-- Hexslingin - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="hexslingin" /><label class="sheet-tab" for="attr_arcane_sheet_hexslingin" data-i18n="hexslingin">Hexslingin</label>
     <div class="sheet-section sheet-section-hexslingin">
@@ -1649,26 +1592,9 @@
           <textarea name="attr_hexdesc" value="Description"></textarea>
         </div>
       </fieldset>
-     <h3>Tricks</h3>
-      <div class="sheet-item sheet-item-trick">
-        <h4>Trick</h4>
-        <h4>Trait</h4>
-        <h4 data-i18n="duration">Duration</h4>
-        <h4 data-i18n="range">Range</h4>
-      </div>
-      <fieldset class="repeating_tricks">
-        <div class="sheet-item sheet-item-trick">
-          <input type="text" name="attr_trickname" value="i.e. Bandage">
-          <input type="text" name="attr_tricktrait" value="Smarts">
-          <input type="text" name="attr_trickduration" value="Permanent" />
-          <input type="text" name="attr_trickrange" value="Touch">
-          <button type="roll" name="roll_trick" value="@{gmtoggle}&{template:simple} {{rollname=@{trickname}}} {{dice=[[{@{tricklvl}@{tricktrait}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_favordesc" value="Description"></textarea>
-        </div>
-      </fieldset>
     </div>
     <!-- Hexslingin - End -->
-    
+
     <!-- Mad Scientist - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="madscience" /><label for="attr_arcane_sheet_madscience" data-i18n="madScience">Mad Science</label>
     <div class="sheet-section sheet-section-madscience">
@@ -1690,26 +1616,6 @@
       </fieldset>
     </div>
     <!-- Mad Scientist - End -->
-      
-    <!-- Mute - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="mute" /><label for="attr_arcane_sheet_mute">Mute</label>
-    <div class="sheet-section sheet-section-mute">
-      <h3>Rewards</h3>
-      <div class="sheet-item sheet-item-mute">
-        <h4>Package</h4>
-        <h4>Price</h4>
-        <h4>Components</h4>
-     </div>
-      <fieldset class="repeating_packages">
-        <div class="sheet-item sheet-item-mute">
-          <input type="text" name="attr_packagename" value="i.e. Aircraft">
-          <input type="text" name="attr_packageprice" value="$6000" />
-          <input type="text" name="attr_packagecomp" value="Electronic, Mechanical, Structural" />
-          <textarea name="attr_rewarddesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Mute - End -->
 
     <!-- Shaman - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="shaman" /><label for="attr_arcane_sheet_shaman" data-i18n="shaman">Shaman</label>
@@ -1763,76 +1669,6 @@
       </fieldset>
     </div>
     <!-- Shaman - End -->
-    
-    <!-- Syker - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="syker" /><label class="sheet-tab" for="attr_arcane_sheet_syker">Syker</label>
-    <div class="sheet-section sheet-section-syker">
-      <h3>Syker Powers</h3>
-      <div class="sheet-item sheet-item-syker">
-        <h4 data-i18n="name">Name</h4>
-        <h4 data-i18n="tn">TN</h4>
-        <h4>Strain</h4>
-        <h4 data-i18n="speed">Speed</h4>
-        <h4 data-i18n="duration">Duration</h4>
-        <h4 data-i18n="range">Range</h4>
-      </div>
-      <fieldset class="repeating_syker">
-        <div class="sheet-item sheet-item-syker">
-          <input type="text" name="attr_sykerpowername" value="i.e. Brain Blast" />
-          <input type="text" name="attr_sykerpowerTN" value="5" />
-          <input type="text" name="attr_sykerpowerstrain" value="1" />
-          <input type="text" name="attr_sykerpowerspeed" value="1" />
-          <input type="text" name="attr_sykerpowerduration" value="Instant" />
-          <input type="text" name="attr_sykerpowerrange" value="20 yards/blastin' level" />
-          <button type="roll" name="roll_sykerpower" value="@{gmtoggle}&{template:simple} {{rollname=@{sykerpowername}}} {{dice=[[{@{blastinlvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_sykerpowerdesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Syker - End -->    
-    
-    <!-- Templar - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="templar" /><label for="attr_arcane_sheet_templar">Templar</label>
-    <div class="sheet-section sheet-section-templar">
-      <h3>Rewards</h3>
-      <div class="sheet-item sheet-item-templar">
-        <h4>Reward</h4>
-        <h4>Level</h4>
-        <h4>Greater Reward</h4>
-     </div>
-      <fieldset class="repeating_rewards">
-        <div class="sheet-item sheet-item-templar">
-          <input type="text" name="attr_rewardname" value="i.e. Lay on Hands">
-          <input type="text" name="attr_rewardlevel" value="5" />
-          <input type="text" name="attr_greaterreward" value="Can cure ailments." />
-          <textarea name="attr_rewarddesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Templar - End -->
-      
-    <!-- Witch - Start -->
-    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="witch" /><label for="attr_arcane_sheet_witch">Witch</label>
-    <div class="sheet-section sheet-section-witch">
-      <h3>Spells</h3>
-      <div class="sheet-item sheet-item-witch">
-        <h4>Power</h4>
-        <h4>Level</h4>
-        <h4>Speed</h4>
-        <h4>Duration</h4>
-     </div>
-      <fieldset class="repeating_spells">
-        <div class="sheet-item sheet-item-witch">
-          <input type="text" name="attr_spellname" value="i.e. Arcane Protection">
-          <input type="text" name="attr_spelllevel" value="1" />
-          <input type="text" name="attr_spellspeed" value="Instant" />
-          <input type="text" name="attr_spellduration" value="Instant" />
-          <button type="roll" name="roll_spell" value="@{gmtoggle}&{template:simple} {{rollname=@{spellname}}} {{dice=[[{@{witchcraftlvl}@{knodietype}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_hpowerdesc" value="Description"></textarea>
-        </div>
-      </fieldset>
-    </div>
-    <!-- Witch - End -->    
   </div>
   <!-- Arcane Ablities Tab - End -->
 
