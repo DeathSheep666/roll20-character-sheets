@@ -800,9 +800,9 @@
 
 .charsheet .sheet-section-arcane {
   grid-template-areas:
-    "header header header header header header header header header"
-    "tab1   tab2   tab3   tab4   tab5   tab6   tab7   tab8   tab9"
-    "spells spells spells spells spells spells spells spells spells";  
+    "header header header header header header header header header header"
+    "tab1   tab2   tab3   tab4   tab5   tab6   tab7   tab8   tab9   tab10"
+    "spells spells spells spells spells spells spells spells spells spells";  
 }
 
 .charsheet .sheet-section-arcane > h3 {
@@ -852,6 +852,11 @@
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(9),
 .charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(9) + label {
   grid-area: tab9;
+}
+
+.charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(10),
+.charsheet .sheet-section-arcane > input.sheet-tab:nth-of-type(10) + label {
+  grid-area: tab10;
 }
 
 .charsheet .sheet-section-misc {
