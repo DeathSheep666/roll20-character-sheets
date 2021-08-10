@@ -1601,6 +1601,34 @@
           <textarea name="attr_hexdesc" value="Description"></textarea>
         </div>
       </fieldset>
+      <h3>Tricks</h3>
+      <div class="sheet-item sheet-item-trick">
+        <h4 data-i18n="name">Name</h4>
+        <h4 data-i18n="trait">Trait</h4>
+        <h4 data-i18n="duration">Duration</h4>
+        <h4 data-i18n="range">Range</h4>
+      </div>
+      <fieldset class="repeating_tricks">
+        <div class="sheet-item sheet-item-trick">
+          <input type="text" name="attr_trickname" value="i.e. Bandage">
+          <select name="attr_tricktrait">
+            <option value="@{cogdtype}" selected="selected" data-i18n="cognition">Cognition</option>
+            <option value="@{defdtype}" data-i18n="deftness">Deftness</option>
+            <option value="@{knodtype}" data-i18n="knowledge">Knowledge</option>
+            <option value="@{miendtype}" data-i18n="mien">Mien</option>
+            <option value="@{nimdtype}" data-i18n="nimbleness">Nimbleness</option>
+            <option value="@{quidtype}" data-i18n="quickness">Quickness</option>
+            <option value="@{smadtype}" data-i18n="smarts">Smarts</option>
+            <option value="@{spidtype}" data-i18n="spirit">Spirit</option>
+            <option value="@{strdtype}" data-i18n="strength">Strength</option>
+            <option value="@{vigdtype}" data-i18n="vigor">Vigor</option>
+          </select>
+          <input type="text" name="attr_trickduration" value="Permanent" />
+          <input type="text" name="attr_trickrange" value="Touch">
+          <button type="roll" name="roll_trick" value="@{gmtoggle}&{template:simple} {{rollname=@{trickname}}} {{dice=[[{@{traitlvl}@{tricktrait}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_favordesc" value="Description"></textarea>
+        </div>
+      </fieldset>
     </div>
     <!-- Hexslingin - End -->
 
