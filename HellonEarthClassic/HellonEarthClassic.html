@@ -1555,6 +1555,31 @@
     </div>
     <!-- Blessed - End -->
 
+    <!-- Enlightened - Start -->
+    <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="enlightened" /><label class="sheet-tab" for="attr_arcane_sheet_enlightened">Enlightened</label>
+    <div class="sheet-section sheet-section-enlightened">
+      <h3>Powers</h3>
+      <div class="sheet-item sheet-item-enlightened">
+        <h4 data-i18n="name">Name</h4>
+        <h4 data-i18n="trait">TN</h4>
+        <h4 data-i18n="hand">Strain</h4>
+        <h4 data-i18n="speed">Speed</h4>
+        <h4 data-i18n="duration">Duration</h4>
+      </div>
+      <fieldset class="repeating_epowers">
+        <div class="sheet-item sheet-item-enlightened">
+          <input type="text" name="attr_epowername" value="i.e. Abundance of Pecking Birds">
+          <input type="text" name="attr_epowertn" value="5">
+          <input type="text" name="attr_epowerstrain" value="2" />
+          <input type="text" name="attr_epowerspeed" value="1" />
+          <input type="text" name="attr_epowerduration" value="Instant" />
+          <button type="roll" name="roll_epower" value="@{gmtoggle}&{template:simple} {{rollname=@{epowername}}} {{dice=[[{@{chilvl}@{spidtype}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_epowerdesc" value="Description"></textarea>
+        </div>
+      </fieldset>
+    </div>
+    <!-- Enlightened - End -->
+    
     <!-- Hexslingin - Start -->
     <input type="radio" class="sheet-tab" name="attr_arcane_sheet" value="hexslingin" /><label class="sheet-tab" for="attr_arcane_sheet_hexslingin" data-i18n="hexslingin">Hexslingin</label>
     <div class="sheet-section sheet-section-hexslingin">
