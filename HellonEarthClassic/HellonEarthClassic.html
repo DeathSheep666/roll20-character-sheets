@@ -532,15 +532,6 @@
         <button type="roll" name="roll_Deftness" value="@{gmtoggle}&{template:simple} {{rollname=@{deftnessMacro}}} {{dice=[[@{deflvl}@{defdtype}!!k1+(@{wound_mod})]]}}"></button>
       </div>
       <div class="sheet-item sheet-item-traits">
-        <h4 data-i18n="bow">Bow</h4>
-        <div class="sheet-grid-1m1">
-          <input type="text" name="attr_bowlvl" value="0" />
-          +
-          <input type="text" name="attr_bowmod" value="0" />
-        </div>
-        <button type="roll" name="roll_Bow" value="@{gmtoggle}&{template:simple} {{rollname=@{bowMacro}}} {{aptitude=[[@{bowlvl}@{defdtype}!!k1+(@{bowmod}+@{wound_mod})]]}} {{level=[[@{bowlvl}]]}} {{unskilled=[[1@{defdtype}!!k1+(-4 + @{wound_mod})]]}}"></button>
-      </div>
-      <div class="sheet-item sheet-item-traits">
         <h4 data-i18n="filching">Filchin'</h4>
         <div class="sheet-grid-1m1">
           <input type="text" name="attr_filchinlvl" value="0" />
