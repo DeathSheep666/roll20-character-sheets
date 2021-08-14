@@ -1676,8 +1676,8 @@
           </select>
           <input type="text" name="attr_trickduration" value="Permanent" />
           <input type="text" name="attr_trickrange" value="Touch">
-          <button type="roll" name="roll_trick" value="@{gmtoggle}&{template:simple} {{rollname=@{trickname}}} {{dice=[[{@{traitlvl}@{tricktrait}!!k1+(@{wound_mod})}]]}}"></button>
-          <textarea name="attr_favordesc" value="Description"></textarea>
+          <button type="roll" name="roll_trick" value="@{gmtoggle}&{template:simple} {{rollname=@{trickname}}} {{dice=[[@{tricktrait}!!k1+(@{wound_mod})}]]}}"></button>
+          <textarea name="attr_trickdesc" value="Description"></textarea>
         </div>
       </fieldset>
     </div>
